@@ -84,7 +84,7 @@ class DayTwo {
         rounds.forEach { round ->
             val opponent = round.split(" ")[0]
             val i = round.split(" ")[1]
-            
+
             when (opponent) {
                 "A" -> {
                     totalPoints += when (i) {
