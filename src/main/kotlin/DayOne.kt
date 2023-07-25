@@ -1,6 +1,12 @@
-class DayOne(_data: String) {
+import java.io.File
 
-    private var data: String = _data
+class DayOne {
+
+    private val input = "src/main/data/day1/input.txt"
+    private val inputTest = "src/main/data/day1/inputTest.txt"
+
+    private fun readFileAsTextUsingInputStream(fileName: String) = File(fileName).inputStream().readBytes().toString(Charsets.UTF_8)
+    private var data: String = readFileAsTextUsingInputStream(input)
     private val elves = data.split("\n\n")
 
     fun partOne(): Int {
